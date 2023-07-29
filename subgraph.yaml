@@ -1,0 +1,48 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: SeaPort_1.5
+    network: matic
+    source:
+      address: "0x00000000000000adc04c56bf30ac9d3c0aaf14dc"
+      abi: SeaPort
+      startBlock: 38300000
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Collection
+      abis:
+        - name: SeaPort
+          file: ./abis/seaport.json
+        - name: IERC721
+          file: ./abis/IERC721.json
+      eventHandlers:
+        - event: OrderFulfilled(bytes32,indexed address,indexed address,address,(uint8,address,uint256,uint256)[],(uint8,address,uint256,uint256,address)[])  
+          handler: handleOrderFulfilled
+      file: ./src/seaport-nfts.ts
+  - kind: ethereum
+    name: SeaPort_1.4
+    network: matic
+    source:
+      address: "0x00000000000001ad428e4906ae43d8f9852d0dd6"
+      abi: SeaPort
+      startBlock: 30300000
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Collection
+      abis:
+        - name: SeaPort
+          file: ./abis/seaport.json
+        - name: IERC721
+          file: ./abis/IERC721.json
+      eventHandlers:
+        - event: OrderFulfilled(bytes32,indexed address,indexed address,address,(uint8,address,uint256,uint256)[],(uint8,address,uint256,uint256,address)[])  
+          handler: handleOrderFulfilled
+      file: ./src/seaport-nfts.ts
