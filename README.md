@@ -10,3 +10,11 @@ This api includes Names and Symbols to be easily searched by Name.
 If you need to gather more information (I.E. Metadata, traits) then you should create a new Graph on TheGraph site.
 Follow the instructions in their wizard, clone this repository and make your changes to include more specific data when fetching.
 
+## Considerations
+
+This code is typescripted and running since febraury with no downtime due to errors.
+Keep in mind that any feature you add has to be stritcly typed and should be tested accordingly as the subgraph MAY stop due to a bug at runtime
+
+## Use permission
+This code is granted here and therefore can be cloned and improved by anyone. There's no license or limitation of this code, so feel free to make use of it.
+Recognition would be nice if you make use of this and appreciate my work !
