@@ -14,6 +14,7 @@ Follow the instructions in their wizard, clone this repository and make your cha
 
 This code is typescripted and running since febraury with no downtime due to errors.
 Keep in mind that any feature you add has to be stritcly typed and should be tested accordingly as the subgraph MAY stop due to a bug at runtime
+Moreover keep in mind that if you want to expand this snippet to a bigger logic, you need to be careful with external reads as reading state of contract at runtime is very resource-expensive on the subgraph. This will eventually reflect on fetching speed the more you read from the chain. 
 
 ## Use permission
 This code is granted here and therefore can be cloned and improved by anyone. There's no license or limitation of this code, so feel free to make use of it.
